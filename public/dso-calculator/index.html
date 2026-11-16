@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSO Calculator: Days Sales Outstanding</title>
+<meta name="description" content="Free days sales outstanding (DSO) calculator. See how long customers take to pay, how far that runs past your terms, and how much cash collections could free.">
+<link rel="canonical" href="https://creditdesktools.com/dso-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DSO Calculator: Days Sales Outstanding">
+<meta property="og:description" content="Free days sales outstanding (DSO) calculator. See how long customers take to pay, how far that runs past your terms, and how much cash collections could free.">
+<meta property="og:url" content="https://creditdesktools.com/dso-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good DSO?", "acceptedAnswer": {"@type": "Answer", "text": "Close to your payment terms. A DSO within about 10 to 15 days of your terms is generally healthy; much higher means collections need attention."}}, {"@type": "Question", "name": "Should DSO use total sales or credit sales?", "acceptedAnswer": {"@type": "Answer", "text": "Credit sales. Including cash sales understates how long credit customers take to pay."}}, {"@type": "Question", "name": "How is DSO different from the cash conversion cycle?", "acceptedAnswer": {"@type": "Answer", "text": "DSO measures only collections. The cash conversion cycle adds inventory days and subtracts the days you take to pay suppliers."}}, {"@type": "Question", "name": "Why did my DSO jump at month end?", "acceptedAnswer": {"@type": "Answer", "text": "A large amount of sales at the end of the period raises receivables before customers have had time to pay. Compare to the same period last year or use average receivables."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "DSO Calculator", "item": "https://creditdesktools.com/dso-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › DSO Calculator</nav>
+<div class="page-head"><h1>DSO Calculator</h1><p>Measure how long your customers take to pay you, and how much cash you would free by collecting on terms.</p></div>
+<div class="calc">
+ <form data-calc="dso-calculator" novalidate>
+<div class="field">
+ <label for="f-ar">Accounts receivable</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-ar" name="ar" type="text" inputmode="decimal" autocomplete="off" value="185,000" required></div>
+ <span class="hint">Balance at period end</span>
+</div>
+<div class="field">
+ <label for="f-sales">Credit sales in the period</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-sales" name="sales" type="text" inputmode="decimal" autocomplete="off" value="1,300,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-days">Days in the period</label>
+ <div class="input has-suf"><input id="f-days" name="days" type="text" inputmode="decimal" autocomplete="off" value="365" required><span class="suf">days</span></div>
+ <span class="hint">365 for a year, 90 for a quarter</span>
+</div>
+<div class="field">
+ <label for="f-terms">Your payment terms <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-suf"><input id="f-terms" name="terms" type="text" inputmode="decimal" autocomplete="off" value="30" data-optional><span class="suf">days</span></div>
+ <span class="hint">Optional, e.g. net 30</span>
+</div>
+ </form>
+ <div class="results" data-results="dso-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>Days sales outstanding</span><output data-out="dso">—</output></div>
+<div class="result "><span>Days beyond terms</span><output data-out="beyond">—</output></div>
+<div class="result "><span>Cash freed by collecting on terms</span><output data-out="release">—</output></div>
+<div class="result "><span>Average credit sales per day</span><output data-out="daily">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>DSO = Accounts receivable ÷ credit sales × days in period
+Cash freed = (DSO − terms) × credit sales per day</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The AR Aging + DSO Dashboard template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>What DSO measures</h2>
+<p>Days sales outstanding is the average number of days it takes to collect payment after a sale on credit. If your terms are net 30 and your DSO is 52, customers are paying, on average, about three weeks late. That gap is cash you have earned but can't use.</p>
+<p>The "cash freed" figure above estimates how much money would come in if your DSO matched your terms. For many small businesses it is the single largest source of cash available without borrowing.</p>
+
+<h2>Calculating it correctly</h2>
+<ul>
+ <li><strong>Use credit sales, not total sales.</strong> Cash and card sales collected at the point of sale never become receivables and make DSO look better than it is.</li>
+ <li><strong>Match the period.</strong> Quarterly sales with 90 days, or annual sales with 365.</li>
+ <li><strong>Watch seasonality.</strong> A big sales month at period end raises receivables and DSO even if customers pay on time. Compare the same month across years, or use average receivables.</li>
+</ul>
+
+<h2>DSO and the aging report together</h2>
+<p>DSO is an average, so it can hide problems. One large customer 120 days late can sit inside a DSO that looks acceptable. Pair DSO with an aging report that shows balances in current, 1-30, 31-60, 61-90 and over-90 buckets. Lenders do the same: receivables over 90 days are usually excluded from a <a href="/borrowing-base-calculator/">borrowing base</a>.</p>
+
+<h2>How to bring DSO down</h2>
+<ol>
+ <li><strong>Invoice immediately.</strong> Every day between shipping and invoicing adds a day to DSO.</li>
+ <li><strong>Make paying easy.</strong> Accept ACH and cards, and put a payment link on every invoice.</li>
+ <li><strong>Follow up on a schedule.</strong> A friendly reminder before the due date, a call on day one past due, and escalation at 30 days past due.</li>
+ <li><strong>Set terms per customer.</strong> Give new or slow customers shorter terms, or ask for deposits.</li>
+ <li><strong>Stop shipping to chronic late payers</strong> until their balance is current.</li>
+</ol>
+<p>If your DSO stays high because your customers are large companies that pay slowly by policy, factoring or an asset-based line can bridge the gap, at a cost.</p>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a good DSO?</summary><p>Close to your payment terms. A DSO within about 10 to 15 days of your terms is generally healthy; much higher means collections need attention.</p></details><details><summary>Should DSO use total sales or credit sales?</summary><p>Credit sales. Including cash sales understates how long credit customers take to pay.</p></details><details><summary>How is DSO different from the cash conversion cycle?</summary><p>DSO measures only collections. The cash conversion cycle adds inventory days and subtracts the days you take to pay suppliers.</p></details><details><summary>Why did my DSO jump at month end?</summary><p>A large amount of sales at the end of the period raises receivables before customers have had time to pay. Compare to the same period last year or use average receivables.</p></details></div>
+</article>
+<aside class="wfs" aria-label="Bookkeeping help from Wise Financial Services">
+ <img src="/assets/img/wise-financial-icon-128.png" alt="Wise Financial Services" width="64" height="64">
+ <div>
+  <p class="label">Need help with your books?</p>
+  <h2>Wise Financial Services</h2>
+  <p>Clean monthly books make every number on this page easier to trust. Wise Financial Services handles bookkeeping, reconciliations and month-end close for small businesses.</p>
+  <a class="wfs-btn" href="mailto:wisefinancialsvcs@gmail.com?subject=Bookkeeping%20help%20(via%20Credit%20Desk%20Tools)">Email Wise Financial Services</a>
+ </div>
+</aside>
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/cash-conversion-cycle-calculator/"><strong>Cash Conversion Cycle Calculator</strong><span>How many days your cash is tied up in inventory and receivables.</span></a><a class="card" href="/borrowing-base-calculator/"><strong>Borrowing Base Calculator</strong><span>How much an asset-based line of credit lets you draw today.</span></a><a class="card" href="/invoice-factoring-cost-calculator/"><strong>Invoice Factoring Cost Calculator</strong><span>What factoring an invoice really costs, as dollars and as an APR.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>

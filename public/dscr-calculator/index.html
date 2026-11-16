@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSCR Calculator: Debt Service Coverage Ratio for Business Loans</title>
+<meta name="description" content="Free DSCR calculator. See your debt service coverage ratio with a proposed loan and the maximum loan your cash flow supports at a lender&#x27;s target.">
+<link rel="canonical" href="https://creditdesktools.com/dscr-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DSCR Calculator: Debt Service Coverage Ratio for Business Loans">
+<meta property="og:description" content="Free DSCR calculator. See your debt service coverage ratio with a proposed loan and the maximum loan your cash flow supports at a lender&#x27;s target.">
+<meta property="og:url" content="https://creditdesktools.com/dscr-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good DSCR?", "acceptedAnswer": {"@type": "Answer", "text": "Most lenders want at least 1.20x to 1.25x. Above 1.50x is considered strong. Below 1.00x means cash flow does not cover the payments."}}, {"@type": "Question", "name": "Is DSCR calculated with EBITDA or net income?", "acceptedAnswer": {"@type": "Answer", "text": "Lenders typically start with net income and add back depreciation, amortization, interest and documented one-time items, which lands close to EBITDA. Each lender has its own adjustments."}}, {"@type": "Question", "name": "Does DSCR include the new loan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Lenders calculate DSCR on a pro forma basis, including the payment on the loan you are applying for along with your existing debt."}}, {"@type": "Question", "name": "What is the difference between DSCR and global DSCR?", "acceptedAnswer": {"@type": "Answer", "text": "DSCR uses only the business's cash flow and debt. Global DSCR adds the guarantor's personal income and personal debt payments."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "DSCR Calculator", "item": "https://creditdesktools.com/dscr-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › DSCR Calculator</nav>
+<div class="page-head"><h1>DSCR Calculator</h1><p>Check the number lenders look at first: whether your cash flow covers all your loan payments, with room to spare.</p></div>
+<div class="calc">
+ <form data-calc="dscr-calculator" novalidate>
+<div class="field">
+ <label for="f-noi">Annual cash flow available for debt</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-noi" name="noi" type="text" inputmode="decimal" autocomplete="off" value="180,000" required></div>
+ <span class="hint">Net operating income or EBITDA</span>
+</div>
+<div class="field">
+ <label for="f-existing">Existing annual debt payments</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-existing" name="existing" type="text" inputmode="decimal" autocomplete="off" value="36,000" required></div>
+ <span class="hint">Principal + interest on current loans, per year</span>
+</div>
+<div class="field">
+ <label for="f-loan">Proposed new loan <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-loan" name="loan" type="text" inputmode="decimal" autocomplete="off" value="250,000" data-optional></div>
+ <span class="hint">Enter 0 to test current debt only</span>
+</div>
+<div class="field">
+ <label for="f-rate">New loan rate <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-suf"><input id="f-rate" name="rate" type="text" inputmode="decimal" autocomplete="off" value="9" data-optional><span class="suf">%</span></div>
+ 
+</div>
+<div class="field">
+ <label for="f-years">New loan term <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-suf"><input id="f-years" name="years" type="text" inputmode="decimal" autocomplete="off" value="10" data-optional><span class="suf">yrs</span></div>
+ 
+</div>
+<div class="field">
+ <label for="f-target">Lender&#x27;s minimum DSCR</label>
+ <div class="input has-suf"><input id="f-target" name="target" type="text" inputmode="decimal" autocomplete="off" value="1.25" required><span class="suf">x</span></div>
+ <span class="hint">1.20 to 1.25 is common</span>
+</div>
+ </form>
+ <div class="results" data-results="dscr-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>DSCR</span><output data-out="dscr">—</output></div>
+<div class="result note"><span>Result</span><output data-out="verdict">—</output></div>
+<div class="result "><span>New loan, annual payments</span><output data-out="newDebt">—</output></div>
+<div class="result "><span>Total annual debt service</span><output data-out="totalDebt">—</output></div>
+<div class="result "><span>Largest new loan at your target</span><output data-out="maxLoan">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>DSCR = Annual cash flow ÷ Total annual debt service
+Max new loan = present value of (cash flow ÷ target − existing debt) over the new loan&#x27;s term</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The Loan Readiness Checklist + DSCR Calculator template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>What DSCR measures</h2>
+<p>The debt service coverage ratio compares the cash a business generates to the loan payments it owes in a year. A DSCR of 1.00x means every dollar of cash flow goes to debt, with nothing left for a slow month. A DSCR of 1.50x means the business earns $1.50 for every $1.00 of debt payments.</p>
+<p>Lenders set a minimum, usually between 1.20x and 1.35x for conventional and SBA loans. Below it, most will decline or cut the loan amount. That is why this calculator also shows the largest new loan your cash flow supports at the lender's target.</p>
+
+<h2>What counts as cash flow</h2>
+<p>Lenders start from net income and add back items that don't use cash or won't continue after the loan:</p>
+<ul>
+ <li>Depreciation and amortization</li>
+ <li>Interest expense on debt being refinanced or paid off</li>
+ <li>One-time expenses with documentation, such as a legal settlement</li>
+ <li>Owner compensation above a market salary, in some cases</li>
+</ul>
+<p>Some lenders then subtract owner draws, taxes not already deducted, or maintenance capital spending. Be conservative: if an add-back needs a long explanation, assume the lender won't count it.</p>
+
+<h2>What counts as debt service</h2>
+<p>Include every required principal and interest payment for the next twelve months: term loans, equipment loans, vehicle loans, SBA loans, and the new loan you are requesting. Lines of credit are often included at an assumed payment even if you only pay interest. Leases may be included too. Leaving debts out only means the lender finds them later.</p>
+
+<h2>Global DSCR</h2>
+<p>For small businesses, the owner usually guarantees the loan, so the lender also runs a global DSCR. That combines the business's cash flow with the owner's personal income, then divides by business debt plus personal obligations like a mortgage and car payments. A healthy business can still fail a global test if the owner's personal debt is heavy.</p>
+
+<h2>How to improve a weak DSCR</h2>
+<ol>
+ <li><strong>Lengthen the term.</strong> A 10-year loan has a much lower annual payment than a 5-year loan of the same size.</li>
+ <li><strong>Borrow less.</strong> Use the maximum loan figure above as your ceiling.</li>
+ <li><strong>Refinance expensive debt.</strong> Rolling a short, high-payment loan into the new one can raise the ratio.</li>
+ <li><strong>Document add-backs.</strong> Clean books with clear support let the lender count cash flow they would otherwise ignore.</li>
+</ol>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a good DSCR?</summary><p>Most lenders want at least 1.20x to 1.25x. Above 1.50x is considered strong. Below 1.00x means cash flow does not cover the payments.</p></details><details><summary>Is DSCR calculated with EBITDA or net income?</summary><p>Lenders typically start with net income and add back depreciation, amortization, interest and documented one-time items, which lands close to EBITDA. Each lender has its own adjustments.</p></details><details><summary>Does DSCR include the new loan?</summary><p>Yes. Lenders calculate DSCR on a pro forma basis, including the payment on the loan you are applying for along with your existing debt.</p></details><details><summary>What is the difference between DSCR and global DSCR?</summary><p>DSCR uses only the business&#x27;s cash flow and debt. Global DSCR adds the guarantor&#x27;s personal income and personal debt payments.</p></details></div>
+</article>
+
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/business-loan-calculator/"><strong>Business Loan Calculator</strong><span>Monthly payment, total interest and a year-by-year schedule.</span></a><a class="card" href="/sba-7a-loan-calculator/"><strong>SBA 7(a) Loan Calculator</strong><span>Payment on an SBA 7(a) loan, with the guarantee fee financed in.</span></a><a class="card" href="/current-ratio-calculator/"><strong>Current and Quick Ratio Calculator</strong><span>Liquidity ratios lenders check: current, quick and working capital.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice Factoring Cost Calculator: Fees, Rebate and True APR</title>
+<meta name="description" content="Free invoice factoring calculator. See the advance, factoring fee, rebate and effective annual rate for any invoice, fee rate and payment timeline.">
+<link rel="canonical" href="https://creditdesktools.com/invoice-factoring-cost-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Invoice Factoring Cost Calculator: Fees, Rebate and True APR">
+<meta property="og:description" content="Free invoice factoring calculator. See the advance, factoring fee, rebate and effective annual rate for any invoice, fee rate and payment timeline.">
+<meta property="og:url" content="https://creditdesktools.com/invoice-factoring-cost-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a typical factoring rate?", "acceptedAnswer": {"@type": "Answer", "text": "Fees commonly run from about 1% to 5% per 30 days, depending on volume, your customers' credit and how quickly they pay."}}, {"@type": "Question", "name": "Is factoring a loan?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. You are selling the invoice rather than borrowing against it, which is why it can be easier to get than a loan. The cost still behaves like interest."}}, {"@type": "Question", "name": "What is a factoring rebate?", "acceptedAnswer": {"@type": "Answer", "text": "The rebate, or reserve, is the part of the invoice the factor holds back until your customer pays. You receive it minus the factoring fee."}}, {"@type": "Question", "name": "Why is the effective rate so much higher than the quoted fee?", "acceptedAnswer": {"@type": "Answer", "text": "The fee is charged per period, on the full invoice rather than the cash advanced, and periods are rounded up. Annualizing it on the advance shows the real cost."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "Invoice Factoring Cost Calculator", "item": "https://creditdesktools.com/invoice-factoring-cost-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › Invoice Factoring Cost Calculator</nav>
+<div class="page-head"><h1>Invoice Factoring Cost Calculator</h1><p>Turn a factoring quote into real numbers: what you get today, what the factor keeps, and the annualized cost.</p></div>
+<div class="calc">
+ <form data-calc="invoice-factoring-cost-calculator" novalidate>
+<div class="field">
+ <label for="f-invoice">Invoice amount</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-invoice" name="invoice" type="text" inputmode="decimal" autocomplete="off" value="25,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-advance">Advance rate</label>
+ <div class="input has-suf"><input id="f-advance" name="advance" type="text" inputmode="decimal" autocomplete="off" value="85" required><span class="suf">%</span></div>
+ <span class="hint">Share of the invoice paid up front</span>
+</div>
+<div class="field">
+ <label for="f-fee">Factoring fee</label>
+ <div class="input has-suf"><input id="f-fee" name="fee" type="text" inputmode="decimal" autocomplete="off" value="2.5" required><span class="suf">%</span></div>
+ <span class="hint">Per fee period</span>
+</div>
+<div class="field">
+ <label for="f-period">Fee period</label>
+ <div class="input has-suf"><input id="f-period" name="period" type="text" inputmode="decimal" autocomplete="off" value="30" required><span class="suf">days</span></div>
+ <span class="hint">How often the fee is charged</span>
+</div>
+<div class="field">
+ <label for="f-days">Days until your customer pays</label>
+ <div class="input has-suf"><input id="f-days" name="days" type="text" inputmode="decimal" autocomplete="off" value="45" required><span class="suf">days</span></div>
+ 
+</div>
+ </form>
+ <div class="results" data-results="invoice-factoring-cost-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>Effective annual rate</span><output data-out="apr">—</output></div>
+<div class="result "><span>Cash advanced today</span><output data-out="advanceAmt">—</output></div>
+<div class="result "><span>Factoring fee</span><output data-out="feeAmt">—</output></div>
+<div class="result "><span>Fee periods charged</span><output data-out="periods">—</output></div>
+<div class="result "><span>Rebate when customer pays</span><output data-out="rebate">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>Fee periods = days to pay ÷ fee period, rounded up
+Fee = Invoice × fee % × periods
+Rebate = Invoice − advance − fee
+Effective annual rate = Fee ÷ advance × 365 ÷ days</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The AR Aging + DSO Dashboard template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>How invoice factoring works</h2>
+<p>Factoring turns unpaid invoices into cash before your customer pays. You sell the invoice to a factor, which advances most of its value right away, usually 70% to 90%. When your customer pays the factor, it releases the remainder to you, minus its fee. That remainder is called the rebate or reserve.</p>
+<p>Because the factor is relying on your customer's credit, factoring is often available to young or thinly capitalized businesses that can't get a bank line. The trade-off is cost.</p>
+
+<h2>Why the quoted rate understates the cost</h2>
+<p>A factor might quote "2.5% per 30 days." That sounds cheap next to a 10% bank loan, but the two are not on the same basis:</p>
+<ul>
+ <li><strong>The fee is charged on the full invoice,</strong> while you only receive the advance. You pay on money you haven't received yet.</li>
+ <li><strong>Fees are charged by period, rounded up.</strong> If your customer pays on day 31 of a 30-day period, you usually pay for two full periods.</li>
+ <li><strong>The rate is per month, not per year.</strong> 2.5% every 30 days is about 30% a year before the other two effects.</li>
+</ul>
+<p>The effective annual rate above puts the cost on the same footing as a loan APR so you can compare honestly.</p>
+
+<h2>Read the agreement for these terms</h2>
+<ul>
+ <li><strong>Recourse vs non-recourse:</strong> with recourse, you buy back invoices your customer doesn't pay. Non-recourse shifts some credit risk to the factor, usually only for customer insolvency, and costs more.</li>
+ <li><strong>Minimum volume:</strong> some agreements charge you if you factor less than a set amount each month.</li>
+ <li><strong>Extra fees:</strong> application, due diligence, wire, lockbox and termination fees all add to the true cost.</li>
+ <li><strong>Notification:</strong> your customers will usually be told to pay the factor directly.</li>
+</ul>
+
+<h2>When factoring makes sense</h2>
+<p>Factoring can be worth the cost when it lets you take orders you would otherwise turn down, or when the alternative is a merchant cash advance. It is expensive as a permanent solution. If your customers routinely pay late, start by checking your <a href="/dso-calculator/">days sales outstanding</a> and tightening collections, which frees cash at no cost. Once you have steady receivables and clean books, an asset-based line of credit is usually far cheaper.</p>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a typical factoring rate?</summary><p>Fees commonly run from about 1% to 5% per 30 days, depending on volume, your customers&#x27; credit and how quickly they pay.</p></details><details><summary>Is factoring a loan?</summary><p>Usually not. You are selling the invoice rather than borrowing against it, which is why it can be easier to get than a loan. The cost still behaves like interest.</p></details><details><summary>What is a factoring rebate?</summary><p>The rebate, or reserve, is the part of the invoice the factor holds back until your customer pays. You receive it minus the factoring fee.</p></details><details><summary>Why is the effective rate so much higher than the quoted fee?</summary><p>The fee is charged per period, on the full invoice rather than the cash advanced, and periods are rounded up. Annualizing it on the advance shows the real cost.</p></details></div>
+</article>
+<aside class="wfs" aria-label="Bookkeeping help from Wise Financial Services">
+ <img src="/assets/img/wise-financial-icon-128.png" alt="Wise Financial Services" width="64" height="64">
+ <div>
+  <p class="label">Need help with your books?</p>
+  <h2>Wise Financial Services</h2>
+  <p>Clean monthly books make every number on this page easier to trust. Wise Financial Services handles bookkeeping, reconciliations and month-end close for small businesses.</p>
+  <a class="wfs-btn" href="mailto:wisefinancialsvcs@gmail.com?subject=Bookkeeping%20help%20(via%20Credit%20Desk%20Tools)">Email Wise Financial Services</a>
+ </div>
+</aside>
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/dso-calculator/"><strong>DSO Calculator</strong><span>How many days customers take to pay, and the cash a faster pace frees.</span></a><a class="card" href="/po-financing-cost-calculator/"><strong>Purchase Order Financing Calculator</strong><span>Whether a PO-financed order still makes money after financing costs.</span></a><a class="card" href="/borrowing-base-calculator/"><strong>Borrowing Base Calculator</strong><span>How much an asset-based line of credit lets you draw today.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>
