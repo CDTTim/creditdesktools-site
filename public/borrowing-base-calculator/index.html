@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borrowing Base Calculator: AR and Inventory Availability</title>
+<meta name="description" content="Free borrowing base calculator. Work out eligible receivables and inventory, advance rates and availability on an asset-based line of credit.">
+<link rel="canonical" href="https://creditdesktools.com/borrowing-base-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Borrowing Base Calculator: AR and Inventory Availability">
+<meta property="og:description" content="Free borrowing base calculator. Work out eligible receivables and inventory, advance rates and availability on an asset-based line of credit.">
+<meta property="og:url" content="https://creditdesktools.com/borrowing-base-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a typical advance rate on receivables?", "acceptedAnswer": {"@type": "Answer", "text": "Usually 75% to 90% of eligible receivables, depending on customer quality and dilution history."}}, {"@type": "Question", "name": "Why are invoices over 90 days ineligible?", "acceptedAnswer": {"@type": "Answer", "text": "The older an invoice gets, the less likely it is to be collected, so lenders exclude it from the collateral they lend against."}}, {"@type": "Question", "name": "What is an inventory cap?", "acceptedAnswer": {"@type": "Answer", "text": "A dollar limit on how much of the borrowing base can come from inventory, regardless of how much inventory you have."}}, {"@type": "Question", "name": "What happens if I am overadvanced?", "acceptedAnswer": {"@type": "Answer", "text": "You must repay the amount above the borrowing base, usually promptly. Repeated overadvances can be a default under the loan agreement."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "Borrowing Base Calculator", "item": "https://creditdesktools.com/borrowing-base-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › Borrowing Base Calculator</nav>
+<div class="page-head"><h1>Borrowing Base Calculator</h1><p>Work out how much you can draw on an asset-based line of credit from your receivables and inventory.</p></div>
+<div class="calc">
+ <form data-calc="borrowing-base-calculator" novalidate>
+<div class="field">
+ <label for="f-ar">Total accounts receivable</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-ar" name="ar" type="text" inputmode="decimal" autocomplete="off" value="600,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-over90">Past due over 90 days <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-over90" name="over90" type="text" inputmode="decimal" autocomplete="off" value="45,000" data-optional></div>
+ <span class="hint">Usually ineligible</span>
+</div>
+<div class="field">
+ <label for="f-arOther">Other ineligible receivables <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-arOther" name="arOther" type="text" inputmode="decimal" autocomplete="off" value="25,000" data-optional></div>
+ <span class="hint">Affiliates, foreign, contra, concentration</span>
+</div>
+<div class="field">
+ <label for="f-arAdvance">Receivables advance rate</label>
+ <div class="input has-suf"><input id="f-arAdvance" name="arAdvance" type="text" inputmode="decimal" autocomplete="off" value="85" required><span class="suf">%</span></div>
+ 
+</div>
+<div class="field">
+ <label for="f-inventory">Inventory <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-inventory" name="inventory" type="text" inputmode="decimal" autocomplete="off" value="400,000" data-optional></div>
+ 
+</div>
+<div class="field">
+ <label for="f-invIneligible">Ineligible inventory <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-invIneligible" name="invIneligible" type="text" inputmode="decimal" autocomplete="off" value="60,000" data-optional></div>
+ <span class="hint">Slow-moving, work in process, consigned</span>
+</div>
+<div class="field">
+ <label for="f-invAdvance">Inventory advance rate <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-suf"><input id="f-invAdvance" name="invAdvance" type="text" inputmode="decimal" autocomplete="off" value="50" data-optional><span class="suf">%</span></div>
+ 
+</div>
+<div class="field">
+ <label for="f-invCap">Inventory cap <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-invCap" name="invCap" type="text" inputmode="decimal" autocomplete="off" value="150,000" data-optional></div>
+ <span class="hint">Maximum loan against inventory; 0 for none</span>
+</div>
+<div class="field">
+ <label for="f-loan">Current loan balance <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-loan" name="loan" type="text" inputmode="decimal" autocomplete="off" value="450,000" data-optional></div>
+ 
+</div>
+ </form>
+ <div class="results" data-results="borrowing-base-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>Available to draw</span><output data-out="excess">—</output></div>
+<div class="result note"><span>Status</span><output data-out="status">—</output></div>
+<div class="result "><span>Borrowing base</span><output data-out="base">—</output></div>
+<div class="result "><span>Eligible receivables</span><output data-out="eligAR">—</output></div>
+<div class="result "><span>Availability from receivables</span><output data-out="arAvail">—</output></div>
+<div class="result "><span>Eligible inventory</span><output data-out="eligInv">—</output></div>
+<div class="result "><span>Availability from inventory</span><output data-out="invAvail">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>Eligible AR = Total AR − over 90 days − other ineligibles
+Borrowing base = Eligible AR × AR rate + min(Eligible inventory × inventory rate, cap)
+Available = Borrowing base − loan balance</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The Borrowing Base Certificate template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>What a borrowing base is</h2>
+<p>An asset-based line of credit doesn't have a fixed limit you can always draw. Instead, the amount available moves with your collateral. The borrowing base is the lender's calculation of what your receivables and inventory will support, and you report it on a borrowing base certificate, usually weekly or monthly. You can draw up to the lesser of the borrowing base or the line's maximum.</p>
+
+<h2>Eligible receivables</h2>
+<p>Lenders only lend against receivables they expect to collect. Common exclusions include:</p>
+<ul>
+ <li>Invoices more than 90 days past invoice date, or 60 days past due</li>
+ <li>Cross-aging: all of a customer's invoices if a large share are past due</li>
+ <li>Amounts owed by affiliates, employees or related companies</li>
+ <li>Foreign customers without credit insurance</li>
+ <li>Contra accounts, where you also owe the customer money</li>
+ <li>Concentrations above a limit, often 20% to 25% in one customer</li>
+</ul>
+<p>The advance rate on eligible receivables is usually 75% to 90%.</p>
+
+<h2>Eligible inventory</h2>
+<p>Inventory is harder for a lender to turn into cash, so advance rates are lower, often 25% to 65% of cost, and an inventory cap limits the total. Finished goods are generally eligible; work in process, slow-moving stock and consigned goods usually are not. Many lenders base the rate on an appraisal of what the inventory would bring in a liquidation.</p>
+
+<h2>Overadvances and reserves</h2>
+<p>If your loan balance is higher than the borrowing base, you are overadvanced and must pay the difference down. That can happen without any new borrowing, simply because receivables were collected faster than new invoices came in, or because a large customer went past 90 days. Lenders can also add reserves, for example for rent owed at a warehouse or for taxes, which reduce availability further.</p>
+
+<h2>Keeping availability healthy</h2>
+<ol>
+ <li>Keep collections current. Every invoice that ages past 90 days drops out entirely.</li>
+ <li>Watch customer concentration as one account grows.</li>
+ <li>Report accurately and on time. Errors on a certificate damage the lender's trust quickly.</li>
+ <li>Track your <a href="/dso-calculator/">days sales outstanding</a> so you see aging problems before the lender does.</li>
+</ol>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a typical advance rate on receivables?</summary><p>Usually 75% to 90% of eligible receivables, depending on customer quality and dilution history.</p></details><details><summary>Why are invoices over 90 days ineligible?</summary><p>The older an invoice gets, the less likely it is to be collected, so lenders exclude it from the collateral they lend against.</p></details><details><summary>What is an inventory cap?</summary><p>A dollar limit on how much of the borrowing base can come from inventory, regardless of how much inventory you have.</p></details><details><summary>What happens if I am overadvanced?</summary><p>You must repay the amount above the borrowing base, usually promptly. Repeated overadvances can be a default under the loan agreement.</p></details></div>
+</article>
+
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/dso-calculator/"><strong>DSO Calculator</strong><span>How many days customers take to pay, and the cash a faster pace frees.</span></a><a class="card" href="/invoice-factoring-cost-calculator/"><strong>Invoice Factoring Cost Calculator</strong><span>What factoring an invoice really costs, as dollars and as an APR.</span></a><a class="card" href="/current-ratio-calculator/"><strong>Current and Quick Ratio Calculator</strong><span>Liquidity ratios lenders check: current, quick and working capital.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>

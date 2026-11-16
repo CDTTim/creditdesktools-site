@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash Conversion Cycle Calculator: DIO, DSO and DPO</title>
+<meta name="description" content="Free cash conversion cycle calculator. Enter revenue, cost of goods, inventory, receivables and payables to get DIO, DSO, DPO and your cash cycle in days.">
+<link rel="canonical" href="https://creditdesktools.com/cash-conversion-cycle-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cash Conversion Cycle Calculator: DIO, DSO and DPO">
+<meta property="og:description" content="Free cash conversion cycle calculator. Enter revenue, cost of goods, inventory, receivables and payables to get DIO, DSO, DPO and your cash cycle in days.">
+<meta property="og:url" content="https://creditdesktools.com/cash-conversion-cycle-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good cash conversion cycle?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the industry. Retailers and distributors often run 30 to 90 days; businesses paid up front can run negative. Compare yourself to your own trend and to peers."}}, {"@type": "Question", "name": "Can the cash conversion cycle be negative?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If customers pay before you pay suppliers, the cycle is negative and suppliers are effectively funding your growth."}}, {"@type": "Question", "name": "Should I use revenue or cost of goods sold for DIO?", "acceptedAnswer": {"@type": "Answer", "text": "Use cost of goods sold for DIO and DPO, since inventory and payables are carried at cost, and revenue for DSO."}}, {"@type": "Question", "name": "How often should I calculate the cycle?", "acceptedAnswer": {"@type": "Answer", "text": "Quarterly is a good habit, monthly if cash is tight or you are growing fast."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "Cash Conversion Cycle Calculator", "item": "https://creditdesktools.com/cash-conversion-cycle-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › Cash Conversion Cycle Calculator</nav>
+<div class="page-head"><h1>Cash Conversion Cycle Calculator</h1><p>Measure how long each dollar spent on inventory takes to come back as cash from customers.</p></div>
+<div class="calc">
+ <form data-calc="cash-conversion-cycle-calculator" novalidate>
+<div class="field">
+ <label for="f-revenue">Annual revenue</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-revenue" name="revenue" type="text" inputmode="decimal" autocomplete="off" value="1,800,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-cogs">Annual cost of goods sold</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-cogs" name="cogs" type="text" inputmode="decimal" autocomplete="off" value="1,100,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-inventory">Inventory</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-inventory" name="inventory" type="text" inputmode="decimal" autocomplete="off" value="210,000" required></div>
+ <span class="hint">Average or current balance</span>
+</div>
+<div class="field">
+ <label for="f-ar">Accounts receivable</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-ar" name="ar" type="text" inputmode="decimal" autocomplete="off" value="240,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-ap">Accounts payable</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-ap" name="ap" type="text" inputmode="decimal" autocomplete="off" value="120,000" required></div>
+ 
+</div>
+ </form>
+ <div class="results" data-results="cash-conversion-cycle-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>Cash conversion cycle</span><output data-out="ccc">—</output></div>
+<div class="result "><span>Days inventory outstanding</span><output data-out="dio">—</output></div>
+<div class="result "><span>Days sales outstanding</span><output data-out="dso">—</output></div>
+<div class="result "><span>Days payables outstanding</span><output data-out="dpo">—</output></div>
+<div class="result "><span>Cash tied up in the cycle</span><output data-out="tiedUp">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>DIO = Inventory ÷ COGS × 365
+DSO = Receivables ÷ Revenue × 365
+DPO = Payables ÷ COGS × 365
+Cash conversion cycle = DIO + DSO − DPO</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The Financial Statement Spreading Template (16 ratios) template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>What the cash conversion cycle tells you</h2>
+<p>The cash conversion cycle (CCC) measures how many days pass between paying for inventory and collecting cash from the customer who bought it. A 55-day cycle means every dollar you put into inventory is unavailable for about 55 days. The longer the cycle, the more working capital the business needs, and the more it has to borrow as it grows.</p>
+<p>The cycle has three parts:</p>
+<ul>
+ <li><strong>Days inventory outstanding (DIO):</strong> how long inventory sits before it sells.</li>
+ <li><strong>Days sales outstanding (DSO):</strong> how long customers take to pay.</li>
+ <li><strong>Days payables outstanding (DPO):</strong> how long you take to pay suppliers. This one shortens the cycle, because your suppliers are financing you in the meantime.</li>
+</ul>
+
+<h2>Why growing businesses run out of cash</h2>
+<p>A profitable business can still run short of cash if its cycle is long. Each new sale requires buying inventory now and collecting later. The "cash tied up" figure above estimates how much money is locked in the cycle at your current cost base. If sales grow 25%, that figure grows about 25% too, and the cash has to come from somewhere.</p>
+
+<h2>Ways to shorten the cycle</h2>
+<ol>
+ <li><strong>Collect faster:</strong> invoice on the day you ship, offer card or ACH payment, follow up on day one past due, and consider a small early-payment discount.</li>
+ <li><strong>Carry less inventory:</strong> find slow-moving items and stop reordering them; order more often in smaller quantities.</li>
+ <li><strong>Pay on terms, not early:</strong> negotiate 45 or 60 days with key suppliers and use the full term, unless an early-pay discount is worth more.</li>
+</ol>
+<p>Even a few days off the cycle can free a meaningful amount of cash. At $1.1 million in annual cost of goods, each day is worth about $3,000.</p>
+
+<h2>Using the right numbers</h2>
+<p>Use a full year of revenue and cost of goods sold, and average balances for inventory, receivables and payables if your business is seasonal. A single month-end balance can make the cycle look better or worse than it is. Lenders who finance working capital, especially asset-based lenders, look at these same measures.</p>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a good cash conversion cycle?</summary><p>It depends on the industry. Retailers and distributors often run 30 to 90 days; businesses paid up front can run negative. Compare yourself to your own trend and to peers.</p></details><details><summary>Can the cash conversion cycle be negative?</summary><p>Yes. If customers pay before you pay suppliers, the cycle is negative and suppliers are effectively funding your growth.</p></details><details><summary>Should I use revenue or cost of goods sold for DIO?</summary><p>Use cost of goods sold for DIO and DPO, since inventory and payables are carried at cost, and revenue for DSO.</p></details><details><summary>How often should I calculate the cycle?</summary><p>Quarterly is a good habit, monthly if cash is tight or you are growing fast.</p></details></div>
+</article>
+<aside class="wfs" aria-label="Bookkeeping help from Wise Financial Services">
+ <img src="/assets/img/wise-financial-icon-128.png" alt="Wise Financial Services" width="64" height="64">
+ <div>
+  <p class="label">Need help with your books?</p>
+  <h2>Wise Financial Services</h2>
+  <p>Clean monthly books make every number on this page easier to trust. Wise Financial Services handles bookkeeping, reconciliations and month-end close for small businesses.</p>
+  <a class="wfs-btn" href="mailto:wisefinancialsvcs@gmail.com?subject=Bookkeeping%20help%20(via%20Credit%20Desk%20Tools)">Email Wise Financial Services</a>
+ </div>
+</aside>
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/dso-calculator/"><strong>DSO Calculator</strong><span>How many days customers take to pay, and the cash a faster pace frees.</span></a><a class="card" href="/current-ratio-calculator/"><strong>Current and Quick Ratio Calculator</strong><span>Liquidity ratios lenders check: current, quick and working capital.</span></a><a class="card" href="/break-even-calculator/"><strong>Break-Even Calculator</strong><span>Units and revenue needed to cover fixed costs, or hit a profit goal.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>

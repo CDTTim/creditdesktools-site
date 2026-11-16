@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merchant Cash Advance APR Calculator: Find the True Cost</title>
+<meta name="description" content="Free merchant cash advance calculator. Convert a factor rate and daily or weekly payment into total cost, payoff time and true APR.">
+<link rel="canonical" href="https://creditdesktools.com/mca-apr-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Merchant Cash Advance APR Calculator: Find the True Cost">
+<meta property="og:description" content="Free merchant cash advance calculator. Convert a factor rate and daily or weekly payment into total cost, payoff time and true APR.">
+<meta property="og:url" content="https://creditdesktools.com/mca-apr-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a factor rate?", "acceptedAnswer": {"@type": "Answer", "text": "The total amount you repay divided by the amount advanced. A 1.35 factor rate on $50,000 means you repay $67,500."}}, {"@type": "Question", "name": "How do I convert a factor rate to APR?", "acceptedAnswer": {"@type": "Answer", "text": "Find the rate that makes the series of fixed payments equal the cash you received, then multiply by the number of payments per year. The calculator does this automatically."}}, {"@type": "Question", "name": "Why is MCA APR so high?", "acceptedAnswer": {"@type": "Answer", "text": "The cost is fixed and repaid over a short period through frequent payments, so the annualized rate is much higher than the factor rate suggests."}}, {"@type": "Question", "name": "Can I pay off a merchant cash advance early to save money?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not, because the payback amount is fixed. Some providers offer an early payoff discount, so ask before you sign."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "Merchant Cash Advance APR Calculator", "item": "https://creditdesktools.com/mca-apr-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › Merchant Cash Advance APR Calculator</nav>
+<div class="page-head"><h1>Merchant Cash Advance APR Calculator</h1><p>A merchant cash advance quotes a factor rate, not an interest rate. This converts it into a true annual rate you can compare.</p></div>
+<div class="calc">
+ <form data-calc="mca-apr-calculator" novalidate>
+<div class="field">
+ <label for="f-funded">Advance amount</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-funded" name="funded" type="text" inputmode="decimal" autocomplete="off" value="50,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-factor">Factor rate</label>
+ <div class="input"><input id="f-factor" name="factor" type="text" inputmode="decimal" autocomplete="off" value="1.35" required></div>
+ <span class="hint">Total payback ÷ amount advanced</span>
+</div>
+<div class="field">
+ <label for="f-fees">Fees deducted from funding <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-fees" name="fees" type="text" inputmode="decimal" autocomplete="off" value="1,500" data-optional></div>
+ <span class="hint">Origination, underwriting</span>
+</div>
+<div class="field">
+ <label for="f-payment">Payment amount</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-payment" name="payment" type="text" inputmode="decimal" autocomplete="off" value="535.71" required></div>
+ <span class="hint">Per daily or weekly debit</span>
+</div>
+<div class="field">
+ <label for="f-freq">Payment frequency</label>
+ <div class="input"><select id="f-freq" name="freq"><option value="252">Daily (business days)</option><option value="52">Weekly</option></select></div>
+ <span class="hint">Daily payments are usually on business days only</span>
+</div>
+ </form>
+ <div class="results" data-results="mca-apr-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>True APR</span><output data-out="apr">—</output></div>
+<div class="result "><span>Total payback</span><output data-out="payback">—</output></div>
+<div class="result "><span>Total cost of the advance</span><output data-out="cost">—</output></div>
+<div class="result "><span>Number of payments</span><output data-out="count">—</output></div>
+<div class="result "><span>Estimated payoff time</span><output data-out="term">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>Payback = Advance × factor rate
+Payments = Payback ÷ payment amount
+True APR = the periodic rate that makes the payments equal the net cash received, × payments per year</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The 13-Week Cash Flow Forecast template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>Factor rates are not interest rates</h2>
+<p>A merchant cash advance (MCA) is sold as a purchase of your future sales. The provider gives you a lump sum and collects a larger fixed amount, the payback, through daily or weekly debits from your bank account. The cost is quoted as a factor rate, such as 1.35, meaning you repay $1.35 for every $1 advanced.</p>
+<p>A factor rate of 1.35 sounds like 35%, but that is the total cost, not an annual rate. If you repay in six months, the annualized cost is far higher than 35%, because you are paying it back quickly and the balance shrinks with every debit while the cost stays fixed.</p>
+
+<h2>How this calculator finds the true APR</h2>
+<p>It takes the cash you actually receive (the advance minus any fees taken out up front), the fixed payment, and the number of payments needed to reach the payback. It then solves for the interest rate that makes that stream of payments equal to the cash received, the same method used to calculate a loan's APR, and annualizes it. Triple-digit results are common for MCAs.</p>
+
+<h2>Paying it off early usually doesn't save money</h2>
+<p>With a loan, paying early cuts the interest. With most MCAs, the payback amount is fixed, so paying early only raises the effective rate. Some providers offer an early payoff discount; ask for it in writing before you sign.</p>
+
+<h2>Watch out for stacking</h2>
+<p>Taking a second advance to cover the payments on the first is called stacking. It is the most common way businesses get into serious trouble with MCAs: daily debits from two or three providers can consume most of the cash coming in. If you are considering a second advance, step back and look at your cash flow first.</p>
+
+<h2>Alternatives worth checking first</h2>
+<ul>
+ <li>A business line of credit or term loan, even at a high rate, usually costs a fraction of an MCA.</li>
+ <li><a href="/invoice-factoring-cost-calculator/">Invoice factoring</a>, if you sell to other businesses on terms.</li>
+ <li>Negotiating longer terms with suppliers or faster payment from customers.</li>
+ <li>A 13-week cash flow forecast, to see whether the shortfall is temporary or structural before you commit to daily payments.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a factor rate?</summary><p>The total amount you repay divided by the amount advanced. A 1.35 factor rate on $50,000 means you repay $67,500.</p></details><details><summary>How do I convert a factor rate to APR?</summary><p>Find the rate that makes the series of fixed payments equal the cash you received, then multiply by the number of payments per year. The calculator does this automatically.</p></details><details><summary>Why is MCA APR so high?</summary><p>The cost is fixed and repaid over a short period through frequent payments, so the annualized rate is much higher than the factor rate suggests.</p></details><details><summary>Can I pay off a merchant cash advance early to save money?</summary><p>Usually not, because the payback amount is fixed. Some providers offer an early payoff discount, so ask before you sign.</p></details></div>
+</article>
+<aside class="wfs" aria-label="Bookkeeping help from Wise Financial Services">
+ <img src="/assets/img/wise-financial-icon-128.png" alt="Wise Financial Services" width="64" height="64">
+ <div>
+  <p class="label">Need help with your books?</p>
+  <h2>Wise Financial Services</h2>
+  <p>Clean monthly books make every number on this page easier to trust. Wise Financial Services handles bookkeeping, reconciliations and month-end close for small businesses.</p>
+  <a class="wfs-btn" href="mailto:wisefinancialsvcs@gmail.com?subject=Bookkeeping%20help%20(via%20Credit%20Desk%20Tools)">Email Wise Financial Services</a>
+ </div>
+</aside>
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/business-loan-calculator/"><strong>Business Loan Calculator</strong><span>Monthly payment, total interest and a year-by-year schedule.</span></a><a class="card" href="/invoice-factoring-cost-calculator/"><strong>Invoice Factoring Cost Calculator</strong><span>What factoring an invoice really costs, as dollars and as an APR.</span></a><a class="card" href="/cash-conversion-cycle-calculator/"><strong>Cash Conversion Cycle Calculator</strong><span>How many days your cash is tied up in inventory and receivables.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>

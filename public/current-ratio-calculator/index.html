@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Current Ratio and Quick Ratio Calculator</title>
+<meta name="description" content="Free current ratio and quick ratio calculator. Enter current assets and liabilities to get both liquidity ratios and your working capital.">
+<link rel="canonical" href="https://creditdesktools.com/current-ratio-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Current Ratio and Quick Ratio Calculator">
+<meta property="og:description" content="Free current ratio and quick ratio calculator. Enter current assets and liabilities to get both liquidity ratios and your working capital.">
+<meta property="og:url" content="https://creditdesktools.com/current-ratio-calculator/">
+<meta property="og:image" content="https://creditdesktools.com/assets/img/icon-512.png">
+<meta name="theme-color" content="#1f3a5f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good current ratio?", "acceptedAnswer": {"@type": "Answer", "text": "Between about 1.20 and 2.00 is generally healthy for small businesses. Below 1.00 means current liabilities exceed current assets."}}, {"@type": "Question", "name": "What is the difference between the current ratio and the quick ratio?", "acceptedAnswer": {"@type": "Answer", "text": "The quick ratio leaves out inventory and prepaid expenses, counting only cash and receivables, so it is a stricter test of liquidity."}}, {"@type": "Question", "name": "Can a current ratio be too high?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A very high ratio can mean cash is sitting idle or inventory and receivables are building up instead of turning into cash."}}, {"@type": "Question", "name": "Is the line of credit balance a current liability?", "acceptedAnswer": {"@type": "Answer", "text": "Usually, yes. Revolving lines are typically due within a year and are classified as current liabilities."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditdesktools.com/"}, {"@type": "ListItem", "position": 2, "name": "Current and Quick Ratio Calculator", "item": "https://creditdesktools.com/current-ratio-calculator/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="wrap">
+  <a class="brand" href="/"><img src="/assets/img/cdt-icon-96.png" alt="" width="36" height="36"><span>Credit Desk <span class="tools">Tools</span></span></a>
+  <nav class="nav" aria-label="Main">
+   <a href="/#calculators" aria-current="page">Calculators</a>
+   <a href="https://www.etsy.com/shop/CreditDeskTools" class="hide-sm">Templates</a>
+   <a href="/about/" class="hide-sm">About</a>
+   <a href="/contact/">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/#calculators">Calculators</a> › Current and Quick Ratio Calculator</nav>
+<div class="page-head"><h1>Current and Quick Ratio Calculator</h1><p>Check whether your short-term assets cover your short-term bills, the way a lender reads your balance sheet.</p></div>
+<div class="calc">
+ <form data-calc="current-ratio-calculator" novalidate>
+<div class="field">
+ <label for="f-cash">Cash</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-cash" name="cash" type="text" inputmode="decimal" autocomplete="off" value="85,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-ar">Accounts receivable</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-ar" name="ar" type="text" inputmode="decimal" autocomplete="off" value="160,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-inventory">Inventory</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-inventory" name="inventory" type="text" inputmode="decimal" autocomplete="off" value="140,000" required></div>
+ 
+</div>
+<div class="field">
+ <label for="f-otherCA">Other current assets <span class="hint" style="display:inline">(optional)</span></label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-otherCA" name="otherCA" type="text" inputmode="decimal" autocomplete="off" value="15,000" data-optional></div>
+ <span class="hint">Prepaids, deposits</span>
+</div>
+<div class="field">
+ <label for="f-cl">Current liabilities</label>
+ <div class="input has-pre"><span class="pre">$</span><input id="f-cl" name="cl" type="text" inputmode="decimal" autocomplete="off" value="230,000" required></div>
+ <span class="hint">Payables, accruals, current portion of debt, line balance</span>
+</div>
+ </form>
+ <div class="results" data-results="current-ratio-calculator" aria-live="polite">
+  <h2>Results</h2>
+  <p class="error" data-error hidden></p>
+<div class="result primary"><span>Current ratio</span><output data-out="current">—</output></div>
+<div class="result "><span>Quick ratio</span><output data-out="quick">—</output></div>
+<div class="result "><span>Working capital</span><output data-out="wc">—</output></div>
+<div class="result "><span>Total current assets</span><output data-out="ca">—</output></div>
+ </div>
+</div>
+
+<div class="formula"><h2>How it's calculated</h2><code>Current ratio = Current assets ÷ current liabilities
+Quick ratio = (Cash + receivables) ÷ current liabilities
+Working capital = Current assets − current liabilities</code></div>
+<div class="cta"><p><strong>Want the full worksheet?</strong> The Financial Statement Spreading Template (16 ratios) template does this and more in Excel or Google Sheets, with room for your real numbers.</p><a class="btn" href="https://www.etsy.com/shop/CreditDeskTools" rel="noopener">See the template</a></div>
+<article class="article">
+<h2>What these ratios show</h2>
+<p>Liquidity ratios answer a simple question: if every bill due in the next twelve months came due, could the business pay it from assets that turn into cash within the same year?</p>
+<ul>
+ <li><strong>Current ratio</strong> compares all current assets to current liabilities. 1.50 means $1.50 of short-term assets for every $1.00 of short-term obligations.</li>
+ <li><strong>Quick ratio</strong> counts only cash and receivables, leaving out inventory and prepaid expenses, which can take time to convert or can't be converted at all.</li>
+ <li><strong>Working capital</strong> is the dollar difference, the cushion the business operates on.</li>
+</ul>
+
+<h2>What lenders look for</h2>
+<p>Many commercial lenders like a current ratio of at least 1.20 to 1.50 and a quick ratio near 1.00, and some write minimums into loan covenants. Context matters: a distributor carrying heavy inventory will have a much higher current ratio than quick ratio, while a service business may have almost no inventory, so the two ratios are close.</p>
+
+<h2>Common reasons the ratios look weak</h2>
+<ol>
+ <li><strong>Long-term needs funded with short-term money.</strong> Buying equipment or a vehicle out of the line of credit puts long-lived assets against current debt. Term out the borrowing instead.</li>
+ <li><strong>Current portion of long-term debt.</strong> A loan maturing within twelve months moves entirely into current liabilities. Refinance before year end if possible.</li>
+ <li><strong>Owner distributions.</strong> Large draws reduce cash directly.</li>
+ <li><strong>Slow collections or excess inventory,</strong> which inflate the current ratio while the quick ratio stays weak. Check your <a href="/cash-conversion-cycle-calculator/">cash conversion cycle</a>.</li>
+</ol>
+
+<h2>A ratio is a snapshot</h2>
+<p>Balance sheet ratios reflect a single day, so they can swing with timing, such as a large customer payment arriving the day after month end. Track them monthly from consistent, reconciled books, and look at the trend rather than one reading.</p>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>What is a good current ratio?</summary><p>Between about 1.20 and 2.00 is generally healthy for small businesses. Below 1.00 means current liabilities exceed current assets.</p></details><details><summary>What is the difference between the current ratio and the quick ratio?</summary><p>The quick ratio leaves out inventory and prepaid expenses, counting only cash and receivables, so it is a stricter test of liquidity.</p></details><details><summary>Can a current ratio be too high?</summary><p>Yes. A very high ratio can mean cash is sitting idle or inventory and receivables are building up instead of turning into cash.</p></details><details><summary>Is the line of credit balance a current liability?</summary><p>Usually, yes. Revolving lines are typically due within a year and are classified as current liabilities.</p></details></div>
+</article>
+<aside class="wfs" aria-label="Bookkeeping help from Wise Financial Services">
+ <img src="/assets/img/wise-financial-icon-128.png" alt="Wise Financial Services" width="64" height="64">
+ <div>
+  <p class="label">Need help with your books?</p>
+  <h2>Wise Financial Services</h2>
+  <p>Clean monthly books make every number on this page easier to trust. Wise Financial Services handles bookkeeping, reconciliations and month-end close for small businesses.</p>
+  <a class="wfs-btn" href="mailto:wisefinancialsvcs@gmail.com?subject=Bookkeeping%20help%20(via%20Credit%20Desk%20Tools)">Email Wise Financial Services</a>
+ </div>
+</aside>
+<section class="related"><h2 style="font-size:20px">Related calculators</h2><div class="cards"><a class="card" href="/cash-conversion-cycle-calculator/"><strong>Cash Conversion Cycle Calculator</strong><span>How many days your cash is tied up in inventory and receivables.</span></a><a class="card" href="/dscr-calculator/"><strong>DSCR Calculator</strong><span>Your debt service coverage ratio and the largest loan it supports.</span></a><a class="card" href="/borrowing-base-calculator/"><strong>Borrowing Base Calculator</strong><span>How much an asset-based line of credit lets you draw today.</span></a></div></section>
+<p class="disclaimer">This calculator gives estimates for education and planning. It is not financial, legal or tax advice, and it is not an offer of credit. Actual terms come from your lender or provider. Last reviewed 2026-11-16.</p>
+</div>
+</main>
+<footer class="site-footer">
+ <div class="wrap">
+  <div>
+   <h3>Credit Desk Tools</h3>
+   <p>Free small business finance calculators and ready-to-use Excel templates, built by lending and accounting professionals.</p>
+   <p>Calculators are for education and planning, not financial, legal or tax advice. © 2026 Credit Desk Tools.</p>
+  </div>
+  <div>
+   <h3>Calculators</h3>
+   <ul>
+    <li><a href="/business-loan-calculator/">Business loan</a></li>
+    <li><a href="/dscr-calculator/">DSCR</a></li>
+    <li><a href="/mca-apr-calculator/">MCA true APR</a></li>
+    <li><a href="/cash-conversion-cycle-calculator/">Cash conversion cycle</a></li>
+    <li><a href="/#calculators">All calculators</a></li>
+   </ul>
+  </div>
+  <div>
+   <h3>Company</h3>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="https://www.etsy.com/shop/CreditDeskTools">Templates on Etsy</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/disclosure/">Affiliate disclosure</a></li>
+   </ul>
+  </div>
+ </div>
+</footer>
+<script src="/assets/calc.js" defer></script>
+</body>
+</html>
