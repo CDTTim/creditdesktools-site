@@ -7,7 +7,7 @@ Then test the math:      node tools/test_calcs.js
 Pages are plain HTML so Cloudflare Pages serves them with no build step.
 Edit content in tools/content.py, layout here, math in assets/calc.js.
 """
-import html, json, os, sys
+import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from content import CALCS, GROUPS, TEMPLATES, ETSY_SHOP
 
@@ -103,6 +103,19 @@ def layout(path, title, desc, body, schema=None, active=""):
 </body>
 </html>
 """
+
+
+STORE_LINK = re.compile(r'<a ([^>]*?)href="(https://(?:www\.)?(?:etsy\.com|payhip\.com)[^"]*)"([^>]*)>')
+
+
+def store_links_new_tab(doc):
+    """Open every Etsy and Payhip link in a new tab so the site stays open."""
+    def fix(m):
+        attrs = (m.group(1) + m.group(3)).replace(' rel="noopener"', '').replace('rel="noopener" ', '').replace('rel="noopener"', '')
+        attrs = re.sub(r'\s*target="[^"]*"', '', attrs).strip()
+        lead = (attrs + " ") if attrs else ""
+        return f'<a {lead}href="{m.group(2)}" target="_blank" rel="noopener">'
+    return STORE_LINK.sub(fix, doc)
 
 
 def fmt_default(x):
@@ -316,9 +329,9 @@ def main():
         target = os.path.join(ROOT, path.strip("/"), "index.html") if path != "/" else os.path.join(ROOT, "index.html")
         os.makedirs(os.path.dirname(target), exist_ok=True)
         with open(target, "w", encoding="utf-8") as fh:
-            fh.write(doc)
+            fh.write(store_links_new_tab(doc))
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as fh:
-        fh.write(p404)
+        fh.write(store_links_new_tab(p404))
     urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{UPDATED}</lastmod></url>" for p, _ in out)
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as fh:
         fh.write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
