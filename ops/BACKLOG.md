@@ -3,7 +3,7 @@
 Weekly build takes the top unchecked item. Reorder freely; Tim's order wins.
 
 ## Content depth (do first)
-- [ ] Expand the 4 highest-intent guides to 600-900 words with a worked example: business loan, DSCR, MCA APR, invoice factoring
+- [x] Expand the 4 highest-intent guides to 600-900 words with a worked example: business loan, DSCR, MCA APR, invoice factoring
 - [ ] Expand remaining 8 guides to 600+ words with a worked example each
 
 ## New calculators

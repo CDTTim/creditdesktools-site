@@ -49,22 +49,51 @@ template="loan", wfs=False,
 related=["sba-7a-loan-calculator","dscr-calculator","mca-apr-calculator"],
 guide="""
 <h2>How a business term loan payment works</h2>
-<p>A term loan is repaid in equal monthly payments. Each payment covers that month's interest first, and whatever is left reduces the balance. Early payments are mostly interest; by the final year almost the whole payment goes to principal. The schedule above shows that shift year by year.</p>
-<p>Three inputs drive the payment: the amount borrowed, the annual interest rate, and the number of months. Stretching the term lowers the payment but raises total interest, often by more than people expect. On a $150,000 loan at 9.5%, moving from five to seven years cuts the payment by roughly $700 a month but adds several thousand dollars in interest.</p>
+<p>A term loan is a fixed amount borrowed once and repaid over a set number of months. Most are amortizing, which means each payment is the same and the balance reaches zero with the last one. Each payment covers that month's interest first, and whatever is left reduces the balance, called the principal. Early payments are mostly interest. By the final year almost the whole payment goes to principal. The schedule above shows that shift year by year.</p>
+<p>Three inputs drive the payment: the amount borrowed, the annual interest rate, and the number of months. The calculator converts the annual rate to a monthly rate by dividing by 12, then applies the standard amortization formula shown under "How it's calculated."</p>
+
+<h2>Worked example</h2>
+<p>Say a business borrows $150,000 at 9.5% for five years to buy equipment and fund a second location.</p>
+<ul>
+ <li><strong>Monthly rate:</strong> 9.5% ÷ 12 = about 0.79% a month.</li>
+ <li><strong>Number of payments:</strong> 5 years × 12 = 60.</li>
+ <li><strong>Monthly payment:</strong> $3,150.28.</li>
+ <li><strong>Total of all payments:</strong> $3,150.28 × 60 = $189,016.75.</li>
+ <li><strong>Total interest:</strong> $189,016.75 − $150,000 = $39,016.75.</li>
+</ul>
+<p>In the first month, interest is $150,000 × 0.79%, or about $1,187.50, so only about $1,963 of the first payment reduces the balance. Over the first year the business pays $13,196.90 in interest and $24,606.45 in principal, leaving a balance of $125,393.55. In year five, interest drops to $1,875.51 and principal paid rises to $35,927.84.</p>
+
+<h2>Term versus total cost</h2>
+<p>Stretching the term lowers the payment but raises total interest, often by more than people expect. Run the same $150,000 at 9.5% over seven years instead of five:</p>
+<ul>
+ <li>The payment falls to $2,451.60, about $699 a month less.</li>
+ <li>Total interest rises to $55,934.17, about $16,900 more.</li>
+</ul>
+<p>Neither answer is wrong. A lower payment leaves more cash for operations and makes the loan easier to qualify for. A shorter term costs less overall. A reasonable approach is to choose the shortest term your cash flow can carry comfortably in a slow month, not just an average one.</p>
 
 <h2>What the quote leaves out</h2>
-<p>The interest rate is not the whole cost. Lenders commonly add an origination fee, a packaging or documentation fee, and sometimes a prepayment penalty. If a fee is deducted from the loan proceeds, you pay interest on money you never receive. To compare offers fairly, ask each lender for the APR, which folds required fees into one annual rate.</p>
+<p>The interest rate is not the whole cost. Lenders commonly add an origination fee, a packaging or documentation fee, and sometimes a prepayment penalty. If a fee is deducted from the loan proceeds, you pay interest on money you never receive.</p>
+<p>In the example above, suppose the lender charges a 2% origination fee, $3,000, taken out of the proceeds. The business receives $147,000 but still repays $3,150.28 a month on $150,000. Measured against the cash actually received, the annual cost works out to about 10.4%, not 9.5%. That is why you should ask each lender for the APR, which folds required fees into one annual rate, when you compare offers.</p>
 <ul>
  <li><strong>Origination fee:</strong> usually a percentage of the loan, paid at closing or taken from proceeds.</li>
  <li><strong>Prepayment penalty:</strong> a charge for paying the loan off early. Ask whether it steps down over time.</li>
- <li><strong>Variable rate:</strong> if the rate floats with prime, your payment can change. Run this calculator at a rate one or two points higher to see the risk.</li>
+ <li><strong>Variable rate:</strong> if the rate floats with an index such as prime, your payment can change. Run this calculator at a rate one or two points higher to see the risk. At 11.5%, the example payment rises to about $3,299, roughly $149 more each month.</li>
 </ul>
 
 <h2>Can the business afford the payment?</h2>
-<p>Lenders answer that question with the debt service coverage ratio: cash flow available for debt divided by total annual debt payments. Most want at least 1.20x to 1.25x. Multiply the monthly payment above by 12, add your other loan payments, and run the <a href="/dscr-calculator/">DSCR calculator</a> before you apply. If the ratio comes up short, a longer term or a smaller amount is easier to fix now than after a decline.</p>
+<p>Lenders answer that question with the debt service coverage ratio (DSCR): cash flow available for debt divided by total annual debt payments. Many want at least 1.20x to 1.25x. In the example, the new loan adds $3,150.28 × 12 = $37,803 a year of debt service. Add your other loan payments and run the total through the <a href="/dscr-calculator/">DSCR calculator</a> before you apply. If the ratio comes up short, a longer term or a smaller amount is easier to fix now than after a decline.</p>
 
 <h2>Using the schedule</h2>
-<p>The interest column matters for taxes and budgeting. Business loan interest is generally deductible as a business expense, so your accountant will want the annual interest figure. The ending balance column tells you what it would take to pay the loan off or refinance at the end of any year.</p>
+<p>The interest column matters for taxes and budgeting. Interest on a loan used for business purposes is generally deductible as a business expense, so your tax preparer will want the annual interest figure. Principal payments are not an expense, which is why a business can show a profit and still feel short of cash while repaying a loan.</p>
+<p>The ending balance column tells you roughly what it would take to pay the loan off or refinance at the end of any year, before any prepayment penalty. If you expect to sell the business, replace equipment or refinance within a few years, that number is often more useful than the payment.</p>
+
+<h2>Before you talk to a lender</h2>
+<ol>
+ <li>Know exactly how much you need and what it is for. Lenders want a use of funds, not a round number.</li>
+ <li>Match the term to the life of what you are buying. A five-year asset should not sit on a ten-year loan, or a ten-year asset on a two-year loan.</li>
+ <li>Have two to three years of tax returns, current financial statements and a list of existing debts ready.</li>
+ <li>Get every quote in writing with the rate, term, fees and any prepayment terms, then compare them on the same basis.</li>
+</ol>
 """,
 faqs=[
  ("How do I calculate a business loan payment?","Use the standard amortization formula: payment equals the loan amount times the monthly rate, divided by one minus one plus the monthly rate raised to the negative number of months. The calculator does this for you and shows the result as you type."),
@@ -95,7 +124,21 @@ related=["business-loan-calculator","sba-7a-loan-calculator","current-ratio-calc
 guide="""
 <h2>What DSCR measures</h2>
 <p>The debt service coverage ratio compares the cash a business generates to the loan payments it owes in a year. A DSCR of 1.00x means every dollar of cash flow goes to debt, with nothing left for a slow month. A DSCR of 1.50x means the business earns $1.50 for every $1.00 of debt payments.</p>
-<p>Lenders set a minimum, usually between 1.20x and 1.35x for conventional and SBA loans. Below it, most will decline or cut the loan amount. That is why this calculator also shows the largest new loan your cash flow supports at the lender's target.</p>
+<p>Lenders set a minimum, usually somewhere between 1.20x and 1.35x for conventional and SBA loans. Below it, most will decline or cut the loan amount. That is why this calculator also shows the largest new loan your cash flow supports at the lender's target. The cushion above 1.00x is there to absorb a slow quarter, a lost customer or a rise in costs without missing a payment.</p>
+
+<h2>Worked example</h2>
+<p>A business has $90,000 of annual cash flow available for debt. It already pays $36,000 a year on an equipment loan and a vehicle loan. It is asking for a new $250,000 loan at 9% over 10 years, and the lender's minimum is 1.25x.</p>
+<ol>
+ <li><strong>New loan payment:</strong> $250,000 at 9% for 120 months is about $3,166.89 a month, or $38,002.73 a year.</li>
+ <li><strong>Total debt service:</strong> $36,000 + $38,002.73 = $74,002.73.</li>
+ <li><strong>DSCR:</strong> $90,000 ÷ $74,002.73 = 1.22x.</li>
+</ol>
+<p>The business covers its payments, but it falls just short of the 1.25x target. Two numbers show how far off it is:</p>
+<ul>
+ <li><strong>Cash flow needed:</strong> 1.25 × $74,002.73 = about $92,503, roughly $2,500 more than it has.</li>
+ <li><strong>Largest loan at 1.25x:</strong> $90,000 ÷ 1.25 = $72,000 of debt service allowed. Subtract the existing $36,000 and $36,000 a year, or $3,000 a month, is left for the new loan. At 9% over 10 years, that payment supports about $236,825.</li>
+</ul>
+<p>So the owner could ask for about $236,000 instead of $250,000. Or, if the lender allows it, stretching the same $250,000 to 15 years lowers annual payments to about $30,428 and lifts the DSCR to about 1.35x. Run each option in the calculator above and bring the one that works to the conversation.</p>
 
 <h2>What counts as cash flow</h2>
 <p>Lenders start from net income and add back items that don't use cash or won't continue after the loan:</p>
@@ -105,7 +148,8 @@ guide="""
  <li>One-time expenses with documentation, such as a legal settlement</li>
  <li>Owner compensation above a market salary, in some cases</li>
 </ul>
-<p>Some lenders then subtract owner draws, taxes not already deducted, or maintenance capital spending. Be conservative: if an add-back needs a long explanation, assume the lender won't count it.</p>
+<p>Some lenders then subtract owner draws, taxes not already deducted, or maintenance capital spending, which is the money needed each year just to keep equipment running. Be conservative: if an add-back needs a long explanation, assume the lender won't count it.</p>
+<p>Lenders usually work from tax returns rather than internal statements, and they may average two or three years. A strong current year after a weak one may be blended down. If this year's numbers are much better, interim financials and an explanation of what changed help.</p>
 
 <h2>What counts as debt service</h2>
 <p>Include every required principal and interest payment for the next twelve months: term loans, equipment loans, vehicle loans, SBA loans, and the new loan you are requesting. Lines of credit are often included at an assumed payment even if you only pay interest. Leases may be included too. Leaving debts out only means the lender finds them later.</p>
@@ -120,6 +164,14 @@ guide="""
  <li><strong>Refinance expensive debt.</strong> Rolling a short, high-payment loan into the new one can raise the ratio.</li>
  <li><strong>Document add-backs.</strong> Clean books with clear support let the lender count cash flow they would otherwise ignore.</li>
 </ol>
+
+<h2>Common mistakes</h2>
+<ul>
+ <li><strong>Leaving out the new loan.</strong> A business with no debt shows a perfect ratio until the loan you are asking for is added.</li>
+ <li><strong>Using revenue instead of cash flow.</strong> DSCR uses what is left after operating expenses, not sales.</li>
+ <li><strong>Counting interest only.</strong> Debt service includes principal. A loan's full payment is what has to be covered.</li>
+ <li><strong>Testing at today's rate only.</strong> If the new loan is variable, rerun the ratio a point or two higher to see how much room is left.</li>
+</ul>
 """,
 faqs=[
  ("What is a good DSCR?","Most lenders want at least 1.20x to 1.25x. Above 1.50x is considered strong. Below 1.00x means cash flow does not cover the payments."),
@@ -207,13 +259,30 @@ guide="""
 </ul>
 <p>The effective annual rate above puts the cost on the same footing as a loan APR so you can compare honestly.</p>
 
+<h2>Worked example</h2>
+<p>A distributor sells $25,000 of goods to a retail chain on net 30 terms. The chain usually pays in about 45 days. A factor offers an 85% advance and a fee of 2.5% per 30 days.</p>
+<ol>
+ <li><strong>Advance today:</strong> $25,000 × 85% = $21,250.</li>
+ <li><strong>Fee periods:</strong> 45 days ÷ 30 = 1.5, rounded up to 2 periods.</li>
+ <li><strong>Factoring fee:</strong> $25,000 × 2.5% × 2 = $1,250.</li>
+ <li><strong>Rebate when the customer pays:</strong> $25,000 − $21,250 − $1,250 = $2,500.</li>
+ <li><strong>Effective annual rate:</strong> $1,250 ÷ $21,250 = 5.88% for 45 days. Multiply by 365 ÷ 45 and the annualized cost is about 47.7%.</li>
+</ol>
+<p>Now suppose the same customer pays in 30 days. Only one fee period applies, the fee drops to $625, the rebate rises to $3,125, and the effective rate falls to about 35.8%. The quote didn't change; only the customer's payment timing did. That is why the day count is the input worth testing most carefully. Use your actual collection history for each customer, not your stated terms.</p>
+<p>Notice too that the business gives up $1,250 to get $21,250 about six weeks early. Whether that is worth it depends on what the cash does in the meantime. If it lets you take a profitable order you would otherwise turn down, it may be. If it just covers ordinary bills, the cost tends to repeat every month.</p>
+
 <h2>Read the agreement for these terms</h2>
 <ul>
  <li><strong>Recourse vs non-recourse:</strong> with recourse, you buy back invoices your customer doesn't pay. Non-recourse shifts some credit risk to the factor, usually only for customer insolvency, and costs more.</li>
  <li><strong>Minimum volume:</strong> some agreements charge you if you factor less than a set amount each month.</li>
  <li><strong>Extra fees:</strong> application, due diligence, wire, lockbox and termination fees all add to the true cost.</li>
  <li><strong>Notification:</strong> your customers will usually be told to pay the factor directly.</li>
+ <li><strong>Fee structure:</strong> some factors charge a flat fee for the first 30 days and then smaller increments, such as every 10 or 15 days. Shorter increments reduce the rounding effect. Enter the increment as the fee period to model it.</li>
+ <li><strong>Term and exit:</strong> check how long the agreement runs, how much notice you must give to leave, and whether the factor files a lien on all business assets or only on receivables.</li>
 </ul>
+
+<h2>What a factor looks at</h2>
+<p>Because the factor is collecting from your customer, it cares most about who owes you money. Expect it to check your customers' credit and payment history, review your aging report, and confirm that invoices are for completed work with no disputes. Invoices for partial deliveries, progress billing or work still under warranty review are often harder to factor. A clean, current aging report speeds up approval and can improve your advance rate.</p>
 
 <h2>When factoring makes sense</h2>
 <p>Factoring can be worth the cost when it lets you take orders you would otherwise turn down, or when the alternative is a merchant cash advance. It is expensive as a permanent solution. If your customers routinely pay late, start by checking your <a href="/dso-calculator/">days sales outstanding</a> and tightening collections, which frees cash at no cost. Once you have steady receivables and clean books, an asset-based line of credit is usually far cheaper.</p>
@@ -303,6 +372,22 @@ guide="""
 
 <h2>How this calculator finds the true APR</h2>
 <p>It takes the cash you actually receive (the advance minus any fees taken out up front), the fixed payment, and the number of payments needed to reach the payback. It then solves for the interest rate that makes that stream of payments equal to the cash received, the same method used to calculate a loan's APR, and annualizes it. Triple-digit results are common for MCAs.</p>
+
+<h2>Worked example</h2>
+<p>A restaurant is offered a $50,000 advance at a 1.35 factor rate, with $1,500 in fees deducted from the funding. Repayment is a fixed daily debit of $535.71 on business days.</p>
+<ol>
+ <li><strong>Total payback:</strong> $50,000 × 1.35 = $67,500.</li>
+ <li><strong>Cash actually received:</strong> $50,000 − $1,500 = $48,500.</li>
+ <li><strong>Total cost:</strong> $67,500 − $48,500 = $19,000.</li>
+ <li><strong>Number of payments:</strong> $67,500 ÷ $535.71 = 126 business-day debits.</li>
+ <li><strong>Payoff time:</strong> at about 252 business days a year, 126 debits is about six months.</li>
+ <li><strong>True APR:</strong> the daily rate that makes 126 payments of $535.71 worth exactly $48,500 today is about 0.554%. Multiply by 252 and the annual rate is about 139.5%.</li>
+</ol>
+<p>A rough check shows why the number is so high. The restaurant pays $19,000 to use the money, but the balance is falling every day, so on average it has only about half the cash for six months. Paying $19,000 for roughly $24,000 used over half a year is far more than 35%.</p>
+<p>Switch the same deal to weekly payments of about $2,596 over 26 weeks and the true APR is still around 136%. Payment frequency changes the result a little. The factor rate and the payoff speed change it a lot.</p>
+
+<h2>Daily payments and cash flow</h2>
+<p>Beyond the rate, think about what a fixed debit does to the bank account. In the example, $535.71 leaves every business day, about $2,680 a week, whether sales were strong or slow. Some MCAs instead take a percentage of card sales, called a holdback, so payments fall when sales fall. If your agreement promises that, ask how the reconciliation works, how often you can request it, and what records you need to provide. Map the debits against a weekly cash forecast before you sign, not after.</p>
 
 <h2>Paying it off early usually doesn't save money</h2>
 <p>With a loan, paying early cuts the interest. With most MCAs, the payback amount is fixed, so paying early only raises the effective rate. Some providers offer an early payoff discount; ask for it in writing before you sign.</p>
